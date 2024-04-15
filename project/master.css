@@ -1,0 +1,505 @@
+:root{
+    --primary-color: #99a98f;
+    --decent-color: #d6e8db;
+    --accent-color: #fff;
+    --secondary-color: rgb(9,189,9);
+    --font-family: 'Poppins',sans-serif;
+    --text-color: grey;
+}
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    
+}
+body{
+    background: #fff;
+    padding: 0 9%;
+}
+.header{
+    padding: 1rem 0;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.searsh--box{
+    background: #f1cd00;
+    border-radius: 10px;
+    flex: 1;
+    position: relative;
+    top: 100px;
+    align-items: center;
+    padding: 0 1rem;
+}
+.searsh--box i{
+    color: black;
+}
+.searsh--box input{
+    background: transparent;
+    padding: 10px;
+    width: 80%;
+}
+.menu-icon{
+    position: relative;
+    top: 100px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.menu-icon i{
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: var(--decent-color);
+}
+.fa-cart-shopping{
+    background: transparent !important;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+.cart-icon{
+    position: relative;
+}
+.cart-icon span{
+    background: var(--secondary-color);
+    color: var(--accent-color);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    font-size: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+}
+.main-menu{
+    position: relative;
+    top: 120px;
+}
+
+.cover{
+    background-image: url(burgertime.png);
+    background-size: cover;
+    font-size: 18px;
+    height: 40vh;
+    position: relative;
+    top: 100px;
+    border-radius: 10px;
+    margin-top: 10px;
+    
+}
+.cover-overlay{
+    
+    height: 80%;
+}
+
+
+.section-heading{
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 1rem 0 10px 0;
+    color: var(--text-color);
+}
+.menu-list{
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.menu-item{
+    width: 114px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid gray;
+    padding: 10px 13px;
+    border-radius: 10px;
+    color: var(--white-color);
+}
+.menu-item img{
+    width: 100%;
+}
+
+.card-list{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+.card{
+    width: 190px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 1rem;
+    border-radius: 10px;
+    background: var(--accent-color);
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    text-align: center;
+    color: var(--text-color);
+}
+.card img {
+    width: 100%;
+}
+.card--price{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.card--price .price{
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.add-to-cart{
+    background: var(--primary-color);
+    color: var(--accent-color);
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+}
+.add-to-cart:hover{
+    color: var(--accent-color);
+    box-shadow: rgba(0 0 0 / 30%) 0px 4px 4px, rgb(231,236,236)
+    0px 0px 0px 3px;
+}
+
+
+.sidebar{
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    background-color: var(--accent-color);
+    box-shadow: -4px 0 6px rgba(0,0,0,0.1);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    
+}
+.sidebar.open{
+    right: 0;
+}
+.sidebar-close{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+.cart-tems{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1rem;
+}
+.individual-cart-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    border-radius: 5px;
+    color: var(--text-color);
+    border: 1px solid var(--decent-color);
+}
+.cart-item-price{
+    color: var(--primary-color);
+}
+.sidebar--footer{
+    position: absolute;
+    bottom: 10px;
+    width: 88%;
+}
+.total--amount{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid var(--decent-color);
+    border-radius: 5px;
+    padding: 15px 10px;
+}
+.cart-total{
+    font-size: 16px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+.chekout-btn{
+    width: 100%;
+    margin-top: 2rem;
+    background: var(--secondary-color);
+    color: var(--accent-color);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+}
+.remove-item{
+    background: var(--primary-color);
+    color: var(--accent-color);
+    border-radius: 5px;
+    padding: 2px 8px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+#icon{
+    width: 30px;
+    cursor: pointer;
+}
+:root{
+    --black-color: white;
+    --white-color: black;
+}
+.dark-theme{
+    --black-color: rgb(0, 0, 0);
+    --white-color:white;
+}
+body{
+    background: var(--black-color);
+}
+.restaurant{
+    position: relative;
+    left: 40px;
+    width: 120px;
+    opacity: 0;
+    transition: .3s;
+}
+.visibale{
+    opacity: 1;
+    transition-delay: .2s;
+}
+
+.menu2{
+    position: fixed;
+    top: 100px;
+    left: -50px;
+    width: 80px;
+    height: 100%;
+    background: transparent;
+    backdrop-filter: blur(40px);
+    border-right: 2px solid rgba(255,255,255,.2);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    padding: 6px 14px;
+    transition: .5s;
+    
+} 
+.menu2.active{
+    width: 260px;
+}
+.menu2 .burgericon{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 180px;
+}
+
+.menu2 .burgericon i{
+    position: absolute;
+    left: 70%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: red;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.menu2 .list{
+    margin-top: 10px;
+}
+.list .list-item-menu{
+    list-style: none;
+    width: 100%;
+    height: 50px;
+    margin: 5px 0;
+    line-height: 50px;
+}
+.list .list-item-menu a{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: red;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 6px;
+}
+.list .list-item-menu a i{
+    min-width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+.list .list-item-menu .active a,
+.list .list-item-menu a:hover{
+    background: rgba(255,255,255,.2);
+}
+.menu2 .link-name{
+    opacity: 0;
+    pointer-events: none;
+}
+.menu2.active .link-name{
+    opacity: 1;
+    pointer-events: auto;
+    transition-delay: calc(.1s * var(--i));
+}
+.menu2 .list i{
+    color: red;
+}
+
+
+.headerbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 120px;
+    background: #42200b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+nav a{
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+nav a:hover,
+nav a.glow{
+    color: yellow;
+}
+.section-container{
+    position: relative;
+    top: 100px;
+}
+section{
+
+    min-height: 100vh;
+    margin: 40px;
+}
+.contaienr__banner{
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 200px;
+    position: relative;
+    top: 100px;
+}
+.banner__card{
+    margin: 10px;
+    padding: 1rem;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+.banner__card:nth-child(1){
+    background-image: url(banner-1.png);
+}
+.banner__card:nth-child(2){
+    background-image: url(banner-2.png);
+}
+.banner__card:nth-child(3){
+    background-image: url(banner-3.png);
+}
+.banner__card:nth-child(4){
+    background-image: url(event.png);
+}
+.banner__card p{
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+}
+.banner__card h4{
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+}
+.banner__card{
+    padding: 1.5rem;
+}
+.banner__card:nth-child(1){
+    grid-area: 1/1/2/3/4;
+}
+@media(width>540px){
+    .contaienr__banner{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+#contact{
+    position: relative;
+    top: 200px;
+}
+.footer{
+    padding: 10px;
+    position: relative;
+    top: 100px;
+    background-image: url('footer-bg.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.footer__logo img{
+    max-width: 250px;
+}
+.footer__content{
+    margin-top: 2rem;
+    display: grid;
+    gap: 2rem;
+}
+.footer__content p{
+    font-weight: 550;
+    color: white;
+    line-height: 1.75rem;
+}
+.footer__links{
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+}
+.footer__links li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 500;
+    color: white;
+}
+.footer__links li span{
+    font-size: 1.25rem;
+}
+.footer__socials{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.footer__socials a{
+    font-size: 1.5rem;
+    color: white;
+}
+.footer__socials a:hover{
+    color: #ffc135;
+
+}
+.footer__bar{
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: white;
+    text-align: center;
+}
